@@ -1,7 +1,0 @@
-Select ACTOR.Name A1, ACTOR.Name A2, count(MovieId), count(STREAM.StreamId) FROM ACTOR
-JOIN MOVIE_ACTOR USING (ActorId)
-JOIN MOVIE USING (MovieId)
-JOIN STREAM USING (MovieId)
-WHERE A1 IN (
-	Select Name FROM ACTOR 
-    )
