@@ -1,0 +1,3 @@
+SELECT Name 
+FROM CUSTOMER LEFT OUTER JOIN STREAM USING(CustomerId)
+where STREAM.StreamId IS NULL and CUSTOMER.Country = 'China';

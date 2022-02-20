@@ -1,0 +1,4 @@
+SELECT S1.Name, COUNT(S2.StaffId) AS N
+FROM STAFF AS S1 LEFT OUTER JOIN STAFF AS S2 ON (S1.StaffId = S2.Supervisor)
+GROUP BY Name
+ORDER BY N desc, Name asc;
